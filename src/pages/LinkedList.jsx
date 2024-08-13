@@ -26,6 +26,7 @@ function LinkedList() {
       <Sandpack
         template="node"
         files={{
+          "ExampleLinkedList.js": ExampleLinkedList,
           "Test.js": Test,
           "index.js": index,
         }}
@@ -33,6 +34,11 @@ function LinkedList() {
           entry: index,
         }}
         autoRun={true}
+        options={{
+          visibleFiles: ["ExampleLinkedList.js"],
+          activeFile: "ExampleLinkedList.js",
+        }}
+        showNavigation={true}
       />
       {/* <SandpackProvider
         template="node"

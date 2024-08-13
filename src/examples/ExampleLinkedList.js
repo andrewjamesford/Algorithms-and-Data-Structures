@@ -1,5 +1,5 @@
 
-export default function example() {
+export default function () {
 
     const listExample = {
         head: {
@@ -79,27 +79,19 @@ export default function example() {
             output += 'null';
 
             // Log the output
-            console.log(output);
+            return output;
         }
     }
 
     // Create a linked list with some nodes
-    let node1 = new ListNode(2);
-    let node2 = new ListNode(5);
-    let node3 = new ListNode(9);
+    let node1 = new ListNode(1);
+    let node2 = new ListNode(2);
+    let node3 = new ListNode(3);
     node1.next = node2;
     node2.next = node3;
 
     let list = new LinkedList(node1);
 
-    // Print the list
-    list.printList(); // 1 -> 2 -> 3 -> null
-
-    console.log('Size=', list.size());
-    console.log('Last=', list.getLast());
-    console.log('First=', list.getFirst());
-    console.log('Clear=', list.clear(), list.printList());
-
-    console.log(listExample);
+    return list.printList();
 
 }

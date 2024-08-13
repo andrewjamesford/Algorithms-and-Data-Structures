@@ -1,5 +1,5 @@
 
-export default function example() {
+export default function () {
 
     const result = "Hello Andrew you are a good person";
 
@@ -8,4 +8,3 @@ export default function example() {
     return result;
 }
 
-console.log(example());
