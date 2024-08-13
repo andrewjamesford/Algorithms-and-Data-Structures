@@ -12,6 +12,7 @@ function LinkedListPage() {
         element pointing to the next. This data structure is a linear collection
         of data elements, with each element pointing to the next.
       </p>
+
       <Sandpack
         template="node"
         files={{
