@@ -1,7 +1,11 @@
 
-export default function () {
-    const result = 4 + 5;
+export default function example() {
 
-    console.log(result);
+    const result = "Hello Andrew you are a good person";
 
+    // console.log(result);
+
+    return result;
 }
+
+console.log(example());
