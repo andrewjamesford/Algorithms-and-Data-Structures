@@ -1,24 +1,13 @@
-import {
-  SandpackProvider,
-  SandpackLayout,
-  SandpackCodeEditor,
-  SandpackConsole,
-  SandpackPreview,
-  useSandpack,
-  Sandpack,
-} from "@codesandbox/sandpack-react";
+import { Sandpack } from "@codesandbox/sandpack-react";
 
-import ExampleLinkedList from "../examples/ExampleLinkedList?raw";
-import Test from "../examples/Test?raw";
-import index from "../examples/index.js?raw";
-// import Server from "../examples/Server?raw";
+import Example from "../examples/LinkedList/Example.js?raw";
+import index from "../examples/LinkedList/index.js?raw";
 
-function LinkedList() {
+function LinkedListPage() {
   return (
     <div>
       <h1>Linked List</h1>
       <p>
-        {" "}
         This data structure is a linear collection of data elements, with each
         element pointing to the next. This data structure is a linear collection
         of data elements, with each element pointing to the next.
@@ -26,8 +15,7 @@ function LinkedList() {
       <Sandpack
         template="node"
         files={{
-          "ExampleLinkedList.js": ExampleLinkedList,
-          "Test.js": Test,
+          "Example.js": Example,
           "index.js": index,
         }}
         customSetup={{
@@ -35,41 +23,13 @@ function LinkedList() {
         }}
         autoRun={true}
         options={{
-          visibleFiles: ["ExampleLinkedList.js"],
-          activeFile: "ExampleLinkedList.js",
+          visibleFiles: ["Example.js"],
+          activeFile: "Example.js",
         }}
         showNavigation={true}
       />
-      {/* <SandpackProvider
-        template="node"
-        // options={
-        //   {
-        //     // bundlerURL: "https://sandpack-bundler.codesandbox.io",
-        //     // visibleFiles: ["Test.js"],
-        //     // activeFile: "Test.js",
-        //   }
-        // }
-        // files={{
-        //   // "Server.js": Server,
-        //   "Test.js": Test,
-        // }}
-        autoRun={true}
-        customSetup={{
-          entry: "../examples/index.js",
-        }}
-        // files={{
-        //   "ExampleLinkedList.js": ExampleLinkedList,
-        // }}
-        // activeFile="Test.js"
-      >
-        <SandpackLayout>
-          <SandpackCodeEditor showRunButton={true} />
-          <SandpackConsole standalone={true} au />
-          <SandpackPreview />
-        </SandpackLayout>
-      </SandpackProvider> */}
     </div>
   );
 }
 
-export default LinkedList;
+export default LinkedListPage;

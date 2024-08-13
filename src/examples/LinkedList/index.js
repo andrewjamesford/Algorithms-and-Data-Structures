@@ -1,5 +1,5 @@
 import { createServer } from 'http';
-import example from './ExampleLinkedList';
+import example from './Example';
 
 const hostname = '127.0.0.1';
 const port = 3000;
