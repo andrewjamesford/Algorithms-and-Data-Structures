@@ -2,6 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/Sets/Example.js?raw";
 import index from "../examples/Sets/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function Sets() {
   return (
@@ -30,10 +31,7 @@ function Sets() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
       />
     </div>

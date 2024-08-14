@@ -2,6 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/Tree/Example.js?raw";
 import index from "../examples/Tree/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function Tree() {
   return (
@@ -41,10 +42,7 @@ function Tree() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
       />
     </div>

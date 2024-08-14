@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LinkedListPage from "./pages/LinkedList";
 import Stack from "./pages/Stack";
 import Tree from "./pages/Tree";

@@ -2,6 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/HeapSort/Example.js?raw";
 import index from "../examples/HeapSort/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function HeapSort() {
   return (
@@ -34,10 +35,7 @@ function HeapSort() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
       />
     </div>

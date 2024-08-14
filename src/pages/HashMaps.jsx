@@ -2,6 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/Graphs/Example.js?raw";
 import index from "../examples/Graphs/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function HashMaps() {
   return (
@@ -25,10 +26,7 @@ function HashMaps() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
       />
     </div>

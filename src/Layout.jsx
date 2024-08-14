@@ -11,7 +11,7 @@ function Layout({ children }) {
               Algorithms and Data Structures Playground
             </h1>
             <a
-              href="https://andrewford.co.nz"
+              href="https://github.com/andrewjamesford/Algorithms-and-Data-Structures"
               className="inline-flex items-center justify-center whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 ml-auto gap-1.5 text-sm"
             >
               <svg
@@ -30,7 +30,7 @@ function Layout({ children }) {
                 <polyline points="16 6 12 2 8 6"></polyline>
                 <line x1="12" x2="12" y1="2" y2="15"></line>
               </svg>
-              Built by Andrew Ford
+              Source Code
             </a>
           </header>
           <main className="flex flex-col h-full lg:flex-row gap-4 overflow-auto p-4 ">
@@ -68,8 +68,8 @@ function Layout({ children }) {
               </nav>
             </div>
             <div className="md:basis-4/5 lg:basis-5/6 flex h-full flex-col rounded-xl bg-muted/50 p-4 border">
-              <div className="flex-1">
-                <div className="grid gap-6 rounded-lg p-4">{children}</div>
+              <div className="flex flex-col flex-grow h-full max-h-fit overflow-auto rounded-[4px] pt-4">
+                {children}
               </div>
             </div>
           </main>

@@ -2,6 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/Stack/Example.js?raw";
 import index from "../examples/Stack/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function Stack() {
   return (
@@ -22,10 +23,7 @@ function Stack() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
       />
     </div>

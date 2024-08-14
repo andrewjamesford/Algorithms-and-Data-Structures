@@ -2,10 +2,11 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/Graphs/Example.js?raw";
 import index from "../examples/Graphs/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function Graphs() {
   return (
-    <div>
+    <>
       <h1 className="text-4xl">Graphs</h1>
       <p className="py-4">
         A graph is a data structure that consists of a set of vertices (or
@@ -23,13 +24,11 @@ function Graphs() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
+        openInCodesandbox={false}
       />
-    </div>
+    </>
   );
 }
 

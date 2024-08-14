@@ -2,6 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/QuickSort/Example.js?raw";
 import index from "../examples/QuickSort/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function QuickSort() {
   return (
@@ -40,10 +41,7 @@ function QuickSort() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
       />
     </div>

@@ -2,6 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/MergeSort/Example.js?raw";
 import index from "../examples/MergeSort/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function MergeSort() {
   return (
@@ -24,10 +25,7 @@ function MergeSort() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
       />
     </div>

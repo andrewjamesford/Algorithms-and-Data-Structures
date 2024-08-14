@@ -2,6 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/LinkedList/Example.js?raw";
 import index from "../examples/LinkedList/index.js?raw";
+import { sandPackOptions } from "../config/settings";
 
 function LinkedListPage() {
   return (
@@ -24,10 +25,7 @@ function LinkedListPage() {
           entry: index,
         }}
         autoRun={true}
-        options={{
-          visibleFiles: ["Example.js"],
-          activeFile: "Example.js",
-        }}
+        options={sandPackOptions}
         showNavigation={true}
       />
     </div>
