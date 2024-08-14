@@ -52,7 +52,11 @@ export default function () {
     // Create a new graph object
     let g = new Graph();
 
-    // Add some vertices to the graph
+    // A vertex (also called a node) in a graph is a fundamental part of the graph structure. 
+    // It represents an entity or a point in the graph where edges (connections) meet. 
+    // In the context of a graph, vertices are used to store data and can be connected to other vertices via edges.
+    // For example, in a social network graph, each vertex might represent a person, and each edge might represent a friendship between two people.
+    // Add some vertices to the graph 
     g.addVertex("A");
     g.addVertex("B");
     g.addVertex("C");
@@ -60,6 +64,8 @@ export default function () {
     g.addVertex("E");
     g.addVertex("F");
 
+
+    // An edge in a graph is a connection between two vertices. 
     // Add some edges to the graph
     g.addEdge("A", "B");
     g.addEdge("A", "D");

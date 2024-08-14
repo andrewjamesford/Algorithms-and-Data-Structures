@@ -14,6 +14,7 @@ function Graphs() {
 
       <Sandpack
         template="node"
+        theme="dark"
         files={{
           "Example.js": Example,
           "index.js": index,

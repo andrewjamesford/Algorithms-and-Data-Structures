@@ -15,6 +15,7 @@ function LinkedListPage() {
 
       <Sandpack
         template="node"
+        theme="dark"
         files={{
           "Example.js": Example,
           "index.js": index,

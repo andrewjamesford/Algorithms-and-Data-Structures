@@ -6,11 +6,12 @@ import index from "../examples/Stack/index.js?raw";
 function Stack() {
   return (
     <div>
-      <h1>Stack Page</h1>
-      <p>This is the Stack page.</p>
+      <h1>Stack</h1>
+      <p>A stack follows the Last-In-First-Out (LIFO) principle</p>
 
       <Sandpack
         template="node"
+        theme="dark"
         files={{
           "Example.js": Example,
           "index.js": index,

@@ -1,21 +1,22 @@
 
 export default function () {
 
-    const listExample = {
-        head: {
-            value: 6,
-            next: {
-                value: 10,
-                next: {
-                    value: 12,
-                    next: {
-                        value: 3,
-                        next: null,
-                    },
-                },
-            },
-        },
-    };
+    // Example of a linked list
+    // const listExample = {
+    //     head: {
+    //         value: 6,
+    //         next: {
+    //             value: 10,
+    //             next: {
+    //                 value: 12,
+    //                 next: {
+    //                     value: 3,
+    //                     next: null,
+    //                 },
+    //             },
+    //         },
+    //     },
+    // };
 
     // Define a node class
     class ListNode {

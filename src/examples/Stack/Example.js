@@ -49,10 +49,10 @@ export default function () {
     myStack.push(1);
     myStack.push(2);
     myStack.push(3);
-    myStack.print(); // 1,2,3
-    console.log(myStack.peek()); // 3
-    console.log(myStack.pop()); // 3
-    console.log(myStack.size()); // 2
+    // return myStack.print(); // 1,2,3
+    myStack.peek(); // 3
+    myStack.pop(); // 3
+    myStack.size(); // 2
 
     return myStack.print(); // 1,2
 
