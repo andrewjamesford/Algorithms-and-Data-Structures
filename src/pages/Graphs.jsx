@@ -6,8 +6,8 @@ import index from "../examples/Graphs/index.js?raw";
 function Graphs() {
   return (
     <div>
-      <h1>Graphs</h1>
-      <p>
+      <h1 className="text-4xl">Graphs</h1>
+      <p className="py-4">
         A graph is a data structure that consists of a set of vertices (or
         nodes) and a set of edges (or connections) between them.
       </p>

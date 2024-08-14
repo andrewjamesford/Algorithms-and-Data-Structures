@@ -6,8 +6,10 @@ import index from "../examples/Stack/index.js?raw";
 function Stack() {
   return (
     <div>
-      <h1>Stack</h1>
-      <p>A stack follows the Last-In-First-Out (LIFO) principle</p>
+      <h1 className="text-4xl">Stack</h1>
+      <p className="py-4">
+        A stack follows the Last-In-First-Out (LIFO) principle
+      </p>
 
       <Sandpack
         template="node"

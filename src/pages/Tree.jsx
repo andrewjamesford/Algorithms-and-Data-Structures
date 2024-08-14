@@ -6,8 +6,8 @@ import index from "../examples/Tree/index.js?raw";
 function Tree() {
   return (
     <div>
-      <h1>Tree</h1>
-      <p>
+      <h1 className="text-4xl">Tree</h1>
+      <p className="py-4">
         A data tree is a hierarchical data structure that consists of nodes
         connected by edges. Each node contains a value or key and may have
         references to its child nodes, forming a parent-child relationship. The
@@ -16,7 +16,7 @@ function Tree() {
         structures and are fundamental in computer science for tasks such as
         searching, sorting, and organizing data.
       </p>
-      <p>
+      <p className="py-4">
         There are several types of trees, each with unique properties and
         applications. For example, a binary tree is a tree where each node has
         at most two children, known as the left and right child. A binary search

@@ -6,8 +6,8 @@ import index from "../examples/QuickSort/index.js?raw";
 function QuickSort() {
   return (
     <div>
-      <h1>Quick Sort</h1>
-      <p>
+      <h1 className="text-4xl">Quick Sort</h1>
+      <p className="py-4">
         This algorithm chooses a pivot item from the collection, partitions the
         collection into two subcollections such that all items less than the
         pivot are in the first subcollection and all items greater than or equal
@@ -15,7 +15,7 @@ function QuickSort() {
         each subcollection. This algorithm is fast and in-place
       </p>
 
-      <p>
+      <p className="py-4">
         The quickSort function takes an array as input and returns a sorted
         array using the quick sort algorithm. The algorithm works by selecting a
         pivot element from the array and partitioning the array into two
@@ -24,7 +24,7 @@ function QuickSort() {
         recursively sorted until the entire array is sorted.
       </p>
 
-      <p>
+      <p className="py-4">
         To test the quick sort algorithm, you can create an array of random
         numbers and pass it to the quickSort() function.
       </p>

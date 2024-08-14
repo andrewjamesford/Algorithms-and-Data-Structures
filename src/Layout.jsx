@@ -34,7 +34,7 @@ function Layout({ children }) {
             </a>
           </header>
           <main className="flex flex-col h-full lg:flex-row gap-4 overflow-auto p-4 ">
-            <div className="lg:basis-1/4 flex h-full flex-col rounded-lg border p-4">
+            <div className="md:basis-1/5 lg:basis-1/6 flex h-full flex-col rounded-lg border p-4">
               <nav className="grid gap-6 ">
                 <ul>
                   <li>
@@ -67,7 +67,7 @@ function Layout({ children }) {
                 </ul>
               </nav>
             </div>
-            <div className="lg:basis-3/4 flex h-full flex-col rounded-xl bg-muted/50 p-4 border">
+            <div className="md:basis-4/5 lg:basis-5/6 flex h-full flex-col rounded-xl bg-muted/50 p-4 border">
               <div className="flex-1">
                 <div className="grid gap-6 rounded-lg p-4">{children}</div>
               </div>

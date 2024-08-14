@@ -6,8 +6,8 @@ import index from "../examples/MergeSort/index.js?raw";
 function MergeSort() {
   return (
     <div>
-      <h1>Merge Sort</h1>
-      <p>
+      <h1 className="text-4xl">Merge Sort</h1>
+      <p className="py-4">
         The algorithm works by dividing the input array into two halves,
         recursively sorting each half, and then merging the two sorted halves
         into a single sorted array.

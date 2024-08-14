@@ -6,8 +6,8 @@ import index from "../examples/LinkedList/index.js?raw";
 function LinkedListPage() {
   return (
     <div>
-      <h1>Linked List</h1>
-      <p>
+      <h1 className="text-4xl">Linked List</h1>
+      <p className="py-4">
         This data structure is a linear collection of data elements, with each
         element pointing to the next. This data structure is a linear collection
         of data elements, with each element pointing to the next.
