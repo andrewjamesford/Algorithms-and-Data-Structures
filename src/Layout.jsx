@@ -47,6 +47,9 @@ function Layout({ children }) {
                     <Link to="/hash-maps">Hash Maps / Tables</Link>
                   </li>
                   <li>
+                    <Link to="/hash-string">Hash String</Link>
+                  </li>
+                  <li>
                     <Link to="/heap-sort">Heap Sort</Link>
                   </li>
                   <li>
@@ -66,6 +69,9 @@ function Layout({ children }) {
                   </li>
                   <li>
                     <Link to="/stack">Stack</Link>
+                  </li>
+                  <li>
+                    <Link to="/tower-hanoi">Tower of Hanoi</Link>
                   </li>
                   <li>
                     <Link to="/tree">Tree</Link>

@@ -11,6 +11,8 @@ import HeapSort from "./pages/HeapSort";
 import Queues from "./pages/Queues";
 import Greedy from "./pages/Greedy";
 import Layout from "./Layout";
+import TowerHanoi from "./pages/TowerHanoi";
+import HashString from "./pages/HashString";
 
 function App() {
   return (
@@ -23,11 +25,13 @@ function App() {
           <Route path="/stack" element={<Stack />} />
           <Route path="/tree" element={<Tree />} />
           <Route path="/hash-maps" element={<HashMaps />} />
+          <Route path="/hash-string" element={<HashString />} />
+          <Route path="/heap-sort" element={<HeapSort />} />
           <Route path="/sets" element={<Sets />} />
           <Route path="/queues" element={<Queues />} />
           <Route path="/quick-sort" element={<QuickSort />} />
           <Route path="/merge-sort" element={<MergeSort />} />
-          <Route path="/heap-sort" element={<HeapSort />} />
+          <Route path="tower-hanoi" element={<TowerHanoi />} />
         </Routes>
       </Layout>
     </>
