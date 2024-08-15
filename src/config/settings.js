@@ -3,22 +3,28 @@ const sandPackOptions = {
 
     visibleFiles: ["Example.js"],
     activeFile: "Example.js",
+    initMode: "lazy",
     showLineNumbers: true,
-    recompileMode: "delayed",
+    autorun: true,
     autoReload: true,
+    recompileMode: "delayed",
+    recompileDelay: 500,
+    // id: "sandpack",
+    logLevel: "info",
+    // bundlerURL: "https://codesandbox.io/sandpack-bundler",
+    // bundlerTimeout: 10000,
+    // startRoute: "/", // default - "/"
+    skipEval: false, // default - false
+    // fileResolver: "codesandbox", // "codesandbox" | "local"
+    externalResources: [], // default - []
+    // classes: {}, // default - {}
     showInlineErrors: true, // default - false
     wrapContent: true, // default - false
     layout: "preview", // "preview" | "tests" | "console";
-    editorHeight: "calc(100%)", // default - 300
-    editorHeightPercentage: 50, // default - 50
-    editorPreviewHeight: "calc(100%)", // default - 500
+    editorHeight: 500, // default - 300
     editorWidthPercentage: 70, // default - 50
     resizablePanels: true, // default - false
-    // previewHeight: "100%", // default - 500
-    // showConsole: true, // default - false
-    // editorHeight: "100%", // default - 300
-    // showPreview: true,
-    // showConsoleButton: true,
+
 };
 
 

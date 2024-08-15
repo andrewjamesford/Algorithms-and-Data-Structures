@@ -6,4 +6,4 @@ const removeWatermark = () => {
     }
 };
 
-setTimeout(removeWatermark, 1000);
+setTimeout(removeWatermark, 5000);
