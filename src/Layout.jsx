@@ -41,6 +41,9 @@ function Layout({ children }) {
                     <Link to="/">Graphs</Link>
                   </li>
                   <li>
+                    <Link to="/greedy">Greedy</Link>
+                  </li>
+                  <li>
                     <Link to="/hash-maps">Hash Maps / Tables</Link>
                   </li>
                   <li>
