@@ -53,6 +53,9 @@ function Layout({ children }) {
                     <Link to="/merge-sort">Merge Sort</Link>
                   </li>
                   <li>
+                    <Link to="/queues">Queues</Link>
+                  </li>
+                  <li>
                     <Link to="/quick-sort">Quick Sort</Link>
                   </li>
                   <li>
