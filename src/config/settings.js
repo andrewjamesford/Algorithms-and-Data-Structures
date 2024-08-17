@@ -22,6 +22,7 @@ const sandPackOptions = {
     editorHeight: 500, // Height of the editor in pixels
     editorWidthPercentage: 70, // Width of the editor as a percentage
     resizablePanels: true, // Allow resizing of panels
+    wrapCodeInFunction: true, // Wrap code in a function
 };
 
 function wrapInFunction(code) {
@@ -34,6 +35,7 @@ const sandPackProps = {
     autoRun: true, // Automatically run the code
     options: sandPackOptions, // Sandpack options
     showNavigation: true, // Show navigation bar
+    wrapCodeInFunction: wrapInFunction, // Wrap code in a function
 };
 
 export {
