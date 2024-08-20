@@ -2,7 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import Example from "../examples/TowerHanoi/Example.js?raw";
 import index from "../examples/TowerHanoi/index.js?raw";
-import { sandPackOptions } from "../config/settings";
+import { sandPackOptions, sandPackProps } from "../config/settings";
 
 function Stack() {
 	return (
@@ -13,25 +13,25 @@ function Stack() {
 				another platform. obeying the following three rules:
 			</p>
 
-			<ol>
-				<li>Only one disc can be moved at a time.</li>
-				<li>A disc can only be moved if it is the uppermost disc on a pile.</li>
-				<li>No disc may be placed on top of a smaller disc.</li>
+			<ol className="ist-decimal list-inside pl-4 mb-4">
+				<li>1. Only one disc can be moved at a time.</li>
+				<li>
+					2. A disc can only be moved if it is the uppermost disc on a pile.
+				</li>
+				<li>3. No disc may be placed on top of a smaller disc.</li>
 			</ol>
 
 			<Sandpack
-				template="node"
-				theme="dark"
 				files={{
 					"Example.js": Example,
 					"index.js": index,
 				}}
-				customSetup={{
-					entry: index,
-				}}
-				autoRun={true}
+				customSetup={{ entry: index }}
 				options={sandPackOptions}
-				showNavigation={true}
+				template={sandPackProps.template}
+				theme={sandPackProps.theme}
+				autoRun={sandPackProps.autoRun}
+				showNavigation={sandPackProps.showNavigation}
 			/>
 		</div>
 	);
