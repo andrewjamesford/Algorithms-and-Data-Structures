@@ -15,7 +15,7 @@ function Layout({ children }) {
 				<div className="flex flex-1 flex-col">
 					<header className="sticky top-0 z-10 flex h-[57px] items-center gap-1 border-b bg-background px-4">
 						<h1 className="text-xl font-semibold">
-							Algorithms and Data Structures Playground
+							<a href="/">Algorithms and Data Structures Playground</a>
 						</h1>
 						<a
 							href="https://github.com/andrewjamesford/Algorithms-and-Data-Structures"
