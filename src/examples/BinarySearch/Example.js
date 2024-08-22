@@ -1,4 +1,5 @@
 export default function () {
+	// Binary Search
 	const binarySearch = (arr, x) => {
 		let start = 0;
 		let end = arr.length - 1;

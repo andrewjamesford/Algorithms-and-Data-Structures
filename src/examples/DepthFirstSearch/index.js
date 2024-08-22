@@ -1,4 +1,4 @@
-import { createServer } from "http";
+import { createServer } from "node:http";
 import example from "./Example";
 
 const hostname = "127.0.0.1";
@@ -8,6 +8,7 @@ const server = createServer((req, res) => {
 	res.statusCode = 200;
 	res.setHeader("Content-Type", "text/html");
 	res.end(example());
+	// res.end(JSON.stringify(example()));
 });
 
 server.listen(port, hostname, () => {

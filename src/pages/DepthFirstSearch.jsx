@@ -9,8 +9,9 @@ function DepthFirstSearch() {
 		<>
 			<h1 className="text-4xl">Depth First Search</h1>
 			<p className="py-4">
-				Graph traversal refers to the process of visiting each node in a graph
-				exactly once.
+				Depth First Search (DFS) is an algorithm for traversing or searching
+				tree or graph data structures. The algorithm starts at the root node and
+				explores as far as possible along each branch before backtracking.
 			</p>
 
 			<Sandpack

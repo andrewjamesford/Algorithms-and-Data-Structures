@@ -1,37 +1,19 @@
 export default function () {
 	// Define a class for the graph
 	class Graph {
-		// Constructor to initialize the graph
 		constructor() {
-			// Use a map to store the adjacency list of each vertex
-			this.adjList = new Map();
+			this.nodes = new Map();
 		}
 
-		// Method to add a vertex to the graph
-		addVertex(v) {
-			// Check if the vertex already exists in the graph
-			if (this.adjList.has(v)) {
-				// Throw an error
-				throw new Error("Vertex already exists in the graph");
-			}
-			// Set the vertex as a key and an empty array as its value
-			this.adjList.set(v, []);
+		addNode(node) {
+			this.nodes.set(node, []);
 		}
 
-		// Method to add an edge between two vertices
-		addEdge(v1, v2) {
-			// Check if both vertices exist in the graph
-			if (this.adjList.has(v1) && this.adjList.has(v2)) {
-				// Get the adjacency list of v1 and push v2 to it
-				this.adjList.get(v1).push(v2);
-				// Get the adjacency list of v2 and push v1 to it
-				this.adjList.get(v2).push(v1);
-			} else {
-				// Throw an error
-				throw new Error("One or both vertices do not exist in the graph");
-			}
+		addEdge(node1, node2) {
+			this.nodes.get(node1).push(node2);
+			this.nodes.get(node2).push(node1);
 		}
-
+		// Depth First Search
 		dfs(start) {
 			const visited = new Set();
 			const stack = [start];
@@ -49,18 +31,19 @@ export default function () {
 						stack.push(neighbor);
 					}
 				}
+				return stack;
 			}
 		}
 	}
 
-	function graphToHTML(graph) {
+	function graphToHTML(graph, node) {
 		let verticesHTML = "";
 		let edgesHTML = "";
 
 		const vertexPositions = new Map();
 		let index = 0;
 
-		graph.adjList.forEach((_, vertex) => {
+		graph.nodes.forEach((_, vertex) => {
 			const x = 100 + 150 * (index % 3);
 			const y = 100 + 150 * Math.floor(index / 3);
 			vertexPositions.set(vertex, { x, y });
@@ -68,7 +51,7 @@ export default function () {
 			index++;
 		});
 
-		for (const [vertex, edges] of graph.adjList) {
+		for (const [vertex, edges] of graph.nodes) {
 			const { x: x1, y: y1 } = vertexPositions.get(vertex);
 			for (const edge of edges) {
 				const { x: x2, y: y2 } = vertexPositions.get(edge);
@@ -77,46 +60,33 @@ export default function () {
 		}
 
 		return `
-        <div style="position: relative; width: 500px; height: 500px;">
+        <div style="position: relative; width: 500px; height: 400px;">
             <svg style="position: absolute; width: 100%; height: 100%;">
                 ${edgesHTML}
             </svg>
             ${verticesHTML}
         </div>
+				<div>Branch traversal: ${graph.dfs(node)}</div>
     `;
 	}
 
-	// Create a new graph object
-	const g = new Graph();
+	const graph = new Graph();
+	const nodeA = "A";
+	const nodeB = "B";
+	const nodeC = "C";
+	const nodeD = "D";
+	const nodeE = "E";
 
-	// A vertex (also called a node) in a graph is a fundamental part of the graph structure.
-	// It represents an entity or a point in the graph where edges (connections) meet.
-	// In the context of a graph, vertices are used to store data and can be connected to other vertices via edges.
-	// For example, in a social network graph, each vertex might represent a person, and each edge might represent a friendship between two people.
-	// Add some vertices to the graph
-	g.addVertex("A");
-	g.addVertex("B");
-	g.addVertex("C");
-	g.addVertex("D");
-	g.addVertex("E");
-	g.addVertex("F");
+	graph.addNode(nodeA);
+	graph.addNode(nodeB);
+	graph.addNode(nodeC);
+	graph.addNode(nodeD);
+	graph.addNode(nodeE);
 
-	// An edge in a graph is a connection between two vertices.
-	// Add some edges to the graph
-	g.addEdge("A", "B");
-	g.addEdge("A", "D");
-	g.addEdge("A", "E");
-	g.addEdge("B", "C");
-	g.addEdge("B", "D");
-	g.addEdge("D", "E");
-	g.addEdge("D", "C");
+	graph.addEdge(nodeA, nodeB);
+	graph.addEdge(nodeA, nodeC);
+	graph.addEdge(nodeB, nodeD);
+	graph.addEdge(nodeB, nodeE);
 
-	g.addEdge("E", "F");
-	g.addEdge("E", "C");
-	g.addEdge("C", "F");
-
-	g.dfs("A");
-
-	// Print the graph
-	return graphToHTML(g);
+	return graphToHTML(graph, nodeA).toString();
 }
