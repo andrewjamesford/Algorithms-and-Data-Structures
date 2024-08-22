@@ -21,6 +21,13 @@ function Stack() {
 				<li>3. No disc may be placed on top of a smaller disc.</li>
 			</ol>
 
+			<p className="mb-4">
+				Play an interactive version of the Tower of Hanoi puzzle&nbsp;
+				<a className="underline" href="http://www.tower-of-hanoi.com/">
+					http://www.tower-of-hanoi.com/
+				</a>
+			</p>
+
 			<Sandpack
 				files={{
 					"Example.js": Example,
