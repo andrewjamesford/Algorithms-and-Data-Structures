@@ -1,8 +1,7 @@
-import { Sandpack } from "@codesandbox/sandpack-react";
+import CodeEditor from "../components/CodeEditor";
 
 import Example from "../examples/Greedy/Example.js?raw";
-import index from "../examples/Greedy/index.js?raw";
-import { sandPackOptions } from "../config/settings";
+
 
 function Queues() {
   return (
@@ -174,20 +173,7 @@ function Queues() {
         </p>
       </div>
 
-      <Sandpack
-        template="node"
-        theme="dark"
-        files={{
-          "Example.js": Example,
-          "index.js": index,
-        }}
-        customSetup={{
-          entry: index,
-        }}
-        autoRun={true}
-        options={sandPackOptions}
-        showNavigation={true}
-      />
+      <CodeEditor code={Example} />
     </div>
   );
 }

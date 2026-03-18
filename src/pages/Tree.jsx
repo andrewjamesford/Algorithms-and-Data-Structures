@@ -1,8 +1,7 @@
-import { Sandpack } from "@codesandbox/sandpack-react";
+import CodeEditor from "../components/CodeEditor";
 
 import Example from "../examples/Tree/Example.js?raw";
-import index from "../examples/Tree/index.js?raw";
-import { sandPackOptions } from "../config/settings";
+
 
 function Tree() {
 	return (
@@ -26,20 +25,7 @@ function Tree() {
 				child contains values greater than the parent node.
 			</p>
 
-			<Sandpack
-				template="node"
-				theme="dark"
-				files={{
-					"Example.js": Example,
-					"index.js": index,
-				}}
-				customSetup={{
-					entry: index,
-				}}
-				autoRun={true}
-				options={sandPackOptions}
-				showNavigation={true}
-			/>
+			<CodeEditor code={Example} />
 		</div>
 	);
 }
