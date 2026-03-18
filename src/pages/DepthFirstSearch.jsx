@@ -1,8 +1,6 @@
-import { Sandpack } from "@codesandbox/sandpack-react";
+import CodeEditor from "../components/CodeEditor";
 
 import Example from "../examples/DepthFirstSearch/Example.js?raw";
-import index from "../examples/DepthFirstSearch/index.js?raw";
-import { sandPackOptions, sandPackProps } from "../config/settings";
 
 function DepthFirstSearch() {
 	return (
@@ -14,18 +12,7 @@ function DepthFirstSearch() {
 				explores as far as possible along each branch before backtracking.
 			</p>
 
-			<Sandpack
-				files={{
-					"Example.js": Example,
-					"index.js": index,
-				}}
-				customSetup={{ entry: index }}
-				options={sandPackOptions}
-				template={sandPackProps.template}
-				theme={sandPackProps.theme}
-				autoRun={sandPackProps.autoRun}
-				showNavigation={sandPackProps.showNavigation}
-			/>
+			<CodeEditor code={Example} />
 		</>
 	);
 }

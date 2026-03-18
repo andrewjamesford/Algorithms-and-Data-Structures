@@ -1,8 +1,7 @@
-import { Sandpack } from "@codesandbox/sandpack-react";
+import CodeEditor from "../components/CodeEditor";
 
 import Example from "../examples/MergeSort/Example.js?raw";
-import index from "../examples/MergeSort/index.js?raw";
-import { sandPackOptions } from "../config/settings";
+
 
 function MergeSort() {
   return (
@@ -14,20 +13,7 @@ function MergeSort() {
         into a single sorted array.
       </p>
 
-      <Sandpack
-        template="node"
-        theme="dark"
-        files={{
-          "Example.js": Example,
-          "index.js": index,
-        }}
-        customSetup={{
-          entry: index,
-        }}
-        autoRun={true}
-        options={sandPackOptions}
-        showNavigation={true}
-      />
+      <CodeEditor code={Example} />
     </div>
   );
 }

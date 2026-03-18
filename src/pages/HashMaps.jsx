@@ -1,8 +1,6 @@
-import { Sandpack } from "@codesandbox/sandpack-react";
+import CodeEditor from "../components/CodeEditor";
 
 import Example from "../examples/HashMaps/Example.js?raw";
-import index from "../examples/HashMaps/index.js?raw";
-import { sandPackOptions, sandPackProps } from "../config/settings";
 
 function HashMaps() {
 	return (
@@ -15,18 +13,7 @@ function HashMaps() {
 				used as a key or a value.
 			</p>
 
-			<Sandpack
-				files={{
-					"Example.js": Example,
-					"index.js": index,
-				}}
-				customSetup={{ entry: index }}
-				options={sandPackOptions}
-				template={sandPackProps.template}
-				theme={sandPackProps.theme}
-				autoRun={sandPackProps.autoRun}
-				showNavigation={sandPackProps.showNavigation}
-			/>
+			<CodeEditor code={Example} />
 		</div>
 	);
 }

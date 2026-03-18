@@ -1,8 +1,7 @@
-import { Sandpack } from "@codesandbox/sandpack-react";
+import CodeEditor from "../components/CodeEditor";
 
 import Example from "../examples/QuickSort/Example.js?raw";
-import index from "../examples/QuickSort/index.js?raw";
-import { sandPackOptions } from "../config/settings";
+
 
 function QuickSort() {
   return (
@@ -30,20 +29,7 @@ function QuickSort() {
         numbers and pass it to the quickSort() function.
       </p>
 
-      <Sandpack
-        template="node"
-        theme="dark"
-        files={{
-          "Example.js": Example,
-          "index.js": index,
-        }}
-        customSetup={{
-          entry: index,
-        }}
-        autoRun={true}
-        options={sandPackOptions}
-        showNavigation={true}
-      />
+      <CodeEditor code={Example} />
     </div>
   );
 }
